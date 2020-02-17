@@ -12,8 +12,16 @@ http://www.zottesso.com.br/professor/disciplinas/TESI/
 > python manage.py migrate
 > python manage.py makemigrations
 
+#### Criar superusário
+> python manage.py createsuperuser
+
 #### Iniciar servidor
-> python manage.py runserver
+```
+python manage.py runserver
+ou
+python manage.py runserver 8080 (ou qualquer outra porta)
+```
+
 
 
 #### Criando páginas
