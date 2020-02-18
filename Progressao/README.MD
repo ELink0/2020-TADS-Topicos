@@ -1,28 +1,42 @@
 Anotações:
-instalar python:
+Instalar python:
 http://www.zottesso.com.br/professor/disciplinas/TESI/
 
-source /opt/virtualenv/django/bin/activate
 
-pip freeze
+### No linux:
+#### Ambiente virtual Django
+> source /opt/virtualenv/django/bin/activate
 
-django-admin startproject Progressao
+#### Iniciando projeto
+> django-admin startproject Progressao
+> python manage.py migrate
+> python manage.py makemigrations
 
-python manage.py migrate
+#### Criar superusário
+> python manage.py createsuperuser
 
-python manage.py makemigrations
-
-
-
-
+#### Iniciar servidor
+```
 python manage.py runserver
+ou
+python manage.py runserver 8080 (ou qualquer outra porta)
+```
 
 
-criando páginas
-python manage.py startapp paginas
+
+#### Criando páginas
+> python manage.py startapp paginas
 
 
-
+#### Ordem de criação: 
+```
 url
 view
 template
+```
+#### Importar os arquivos da pasta static
+
+```
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+```
